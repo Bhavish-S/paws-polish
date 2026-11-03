@@ -11,6 +11,7 @@ export function SiteNav() {
         </Link>
         <Link to="/" className={cls} activeOptions={{ exact: true }} activeProps={{ className: "bg-secondary" }}>Home</Link>
         <Link to="/services" className={cls} activeProps={{ className: "bg-secondary" }}>Services</Link>
+        <Link to="/book" search={{ plan: "Spa" }} className={cls} activeProps={{ className: "bg-secondary" }}>Book</Link>
         <Link to="/dashboard" className={`${cls} bg-primary text-primary-foreground hover:bg-primary/90`}>Dashboard</Link>
       </nav>
     </header>

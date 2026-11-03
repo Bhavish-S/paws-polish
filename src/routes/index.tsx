@@ -43,7 +43,7 @@ function Index() {
             </h1>
             <p className="mt-6 max-w-md text-lg text-muted-foreground">Gentle grooming, bubble baths and breed-perfect styling — tracked live from your pet dashboard.</p>
             <div className="mt-8 flex gap-3">
-              <Link to="/dashboard" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 font-semibold text-accent-foreground shadow-3d transition hover:-translate-y-1">
+              <Link to="/book" search={{ plan: "Spa" }} className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 font-semibold text-accent-foreground shadow-3d transition hover:-translate-y-1">
                 Book a session <ArrowRight className="h-4 w-4" />
               </Link>
               <Link to="/services" className="rounded-full border-2 border-primary px-7 py-4 font-semibold hover:bg-primary hover:text-primary-foreground transition">Services</Link>
