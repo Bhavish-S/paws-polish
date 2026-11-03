@@ -48,7 +48,7 @@ function Dashboard() {
   const next = s.points >= 1000 ? 1000 : s.points >= 500 ? 1000 : 500;
 
   const addPet = () => {
-    if (!form.name.trim()) return toast.error("Give your pet a name");
+    if (!form.name.trim()) { toast.error("Give your pet a name"); return; }
     const id = uid();
     setState((st) => ({ ...st, pets: [...st.pets, { id, name: form.name.trim(), breed: form.breed.trim() || "Good boy", e: form.e, coat: 70, mood: 90 }] }));
     setSel(id); setAdding(false); setForm({ name: "", breed: "", e: "🐶" });
@@ -64,7 +64,7 @@ function Dashboard() {
     if (n === steps.length - 1) toast.success(`${pet?.name ?? "Your pet"} is ready for pickup! 🎀`);
   };
   const redeem = () => {
-    if (s.points < 200) return toast.error("You need 200 points for a free treat box");
+    if (s.points < 200) { toast.error("You need 200 points for a free treat box"); return; }
     setState((st) => ({ ...st, points: st.points - 200 }));
     toast.success("Treat box added to your next visit 🦴");
   };

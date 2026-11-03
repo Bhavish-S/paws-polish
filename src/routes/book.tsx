@@ -6,7 +6,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { ADDONS, PLANS, SLOTS, priceFor, setState, uid, useStore } from "@/lib/store";
 
 export const Route = createFileRoute("/book")({
-  validateSearch: (s: Record<string, unknown>) => ({ plan: typeof s.plan === "string" ? s.plan : "Spa" }),
+  validateSearch: (s: Record<string, unknown>) => ({ plan: typeof s["plan"] === "string" ? s["plan"] : "Spa" }),
   head: () => ({
     meta: [
       { title: "Book a Grooming Session — Fur&Fern" },
