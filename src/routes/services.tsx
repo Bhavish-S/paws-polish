@@ -39,7 +39,7 @@ function Services() {
                 <ul className="mt-6 space-y-2">
                   {p.items.map((i) => <li key={i} className="flex gap-2"><Check className="h-5 w-5" />{i}</li>)}
                 </ul>
-                <Link to="/dashboard" className="mt-8 block rounded-full bg-accent py-3 text-center font-semibold text-accent-foreground">Book {p.n}</Link>
+                <Link to="/book" search={{ plan: p.n }} className="mt-8 block rounded-full bg-accent py-3 text-center font-semibold text-accent-foreground">Book {p.n}</Link>
               </div>
             </Tilt>
           ))}
