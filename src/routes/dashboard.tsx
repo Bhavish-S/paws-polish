@@ -44,7 +44,7 @@ function Dashboard() {
     { d: "Nov 06", s: "Spa package", p: "Biscuit" },
     { d: "Nov 12", s: "Pawdicure", p: "Miso" },
   ]);
-  const pet = pets[sel];
+  const pet = pets[sel]!;
   return (
     <div className="min-h-screen bg-hero">
       <SiteNav />
